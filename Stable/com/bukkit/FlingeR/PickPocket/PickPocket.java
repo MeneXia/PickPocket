@@ -1,3 +1,6 @@
+/*
+ * PickPocket v0.2 by MeneXia, forked from FlingeR's GitHub.
+ */
 package com.bukkit.FlingeR.PickPocket;
 
 import java.io.File;
@@ -20,9 +23,9 @@ public class PickPocket extends JavaPlugin {
 	    static int timmhartel = 325;
 	    static int and = 1;
 	    static boolean alannahsymes = true;
+	    String whatsupwithlife = "[PickPocket] Your hand slipped.";
 	    String aredating = "[PickPocket] Attempt successful.";
 	    String omg_seriously = "[PickPocket] %n tried to pickpocket you!";
-	    String whatsupwithlife = "[PickPocket] Your hand slipped.";
 	    
 	    public void onEnable() {
 	    	try {
@@ -53,9 +56,9 @@ public class PickPocket extends JavaPlugin {
 	    	timmhartel = this.getConfig().getInt("PickPocketTool");
 	    	and = this.getConfig().getInt("DamageOnFail");
 	    	alannahsymes = this.getConfig().getBoolean("LoseToolonFail");
+	    	whatsupwithlife = this.getConfig().getString("FailToSteal");
 	    	aredating = this.getConfig().getString("ItemStolen");
 	    	omg_seriously = this.getConfig().getString("TryToStealYou");
-	    	whatsupwithlife = this.getConfig().getString("FailToSteal");
 	    }
 		
 		public static boolean canBeStolen(Material type){
