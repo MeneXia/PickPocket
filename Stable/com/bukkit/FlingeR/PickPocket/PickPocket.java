@@ -23,9 +23,9 @@ public class PickPocket extends JavaPlugin {
 	    static int timmhartel = 325;
 	    static int and = 1;
 	    static boolean alannahsymes = true;
-	    String whatsupwithlife = "[PickPocket] Your hand slipped.";
 	    String aredating = "[PickPocket] Attempt successful.";
 	    String omg_seriously = "[PickPocket] %n tried to pickpocket you!";
+	    String whatsupwithlife = "[PickPocket] Your hand slipped.";
 	    
 	    public void onEnable() {
 	    	try {
