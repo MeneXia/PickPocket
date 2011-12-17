@@ -1,6 +1,6 @@
 name: PickPocket
 main: com.bukkit.FlingeR.PickPocket.PickPocket
-version: 0.2
+version: 0.21
 website: http://www.opentz.com.ar/MinecraftProjects/?page_id=90
 author: MeneXia
 permissions:

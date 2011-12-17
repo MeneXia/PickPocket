@@ -1,7 +1,0 @@
-# PickPocket config file v0.2
-PickPocketTool: 325
-DamageOnFail: 1
-LoseToolonFail: true
-FailToSteal: Your hand slipped.
-ItemStolen: Attempt successful.
-TryToStealYou: Someone tried to pickpocket you!

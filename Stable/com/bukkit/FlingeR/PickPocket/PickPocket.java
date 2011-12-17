@@ -45,7 +45,12 @@ public class PickPocket extends JavaPlugin {
 	     PluginManager pm = getServer().getPluginManager();
 	     PluginDescriptionFile pdf = this.getDescription();
 	        pm.registerEvent(Event.Type.PLAYER_INTERACT_ENTITY, playerListener, Event.Priority.Normal, this);
-	        this.logger.info( "[PickPocket] version " + pdf.getVersion() + " by MeneXia is enabled!" );
+	    	try {
+	    		readProperties();
+	    	} catch (Exception e1) {
+	    		this.logger.info("[PickPocket] Exception while reading items.properties.");
+	    	}
+	    	this.logger.info( "[PickPocket] version " + pdf.getVersion() + " by MeneXia is enabled!" );
 	    	this.logger.info("[PickPocket] Permissions will default to op if SuperPerms is not present.");
 	    }
 	    
