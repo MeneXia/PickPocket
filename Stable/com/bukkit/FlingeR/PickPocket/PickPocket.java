@@ -3,7 +3,9 @@
  */
 package com.bukkit.FlingeR.PickPocket;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.util.HashMap;
 import java.util.logging.Logger;
 
@@ -60,6 +62,23 @@ public class PickPocket extends JavaPlugin {
 	    	aredating = this.getConfig().getString("ItemStolen");
 	    	omg_seriously = this.getConfig().getString("TryToStealYou");
 	    }
+	    
+	    public static void readProperties() throws Exception {
+			String fileName = "plugins/PickPocket/items.properties";
+			BufferedReader reader = new BufferedReader(new FileReader(fileName));
+			String line;
+			while ((line = reader.readLine()) != null) {
+				if ((line.trim().length() == 0) || 
+						(line.charAt(0) == '#')) {
+					continue;
+				}
+				int keyPosition = line. indexOf('=');
+				Material item = Material.getMaterial(line.substring(0, keyPosition).trim());
+				double value = Double.parseDouble(line.substring(keyPosition+1, line.length()).trim());
+				IList.put(item, value);
+			}
+	        System.out.println("[PickPocket] Configuration sucesfuly loaded");			
+		}
 		
 		public static boolean canBeStolen(Material type){
 			return(IList.containsKey(type));
