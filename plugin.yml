@@ -3,3 +3,10 @@ main: com.bukkit.FlingeR.PickPocket.PickPocket
 version: 0.2
 website: http://www.opentz.com.ar/MinecraftProjects/?page_id=90
 author: MeneXia
+permissions:
+    PickPocket.use:
+        description: Lets you use PickPocket.
+        default: op
+    PickPocket.protected:
+        description: Thieves cannot use PickPocket against you.
+        default: op
